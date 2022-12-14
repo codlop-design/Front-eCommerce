@@ -1,14 +1,3 @@
-// document.addEventListener(
-//     "DOMContentLoaded", () => {
-//         new Mmenu( "#all-category", {
-//            "offCanvas": {
-//               "position": "right-front"
-//            },
-//            "theme": "white"
-//         });
-//     }
-// );
-
 // slider-1
 const slider_1 = new Swiper('#slider-1', {
     loop: true,
@@ -65,7 +54,43 @@ const brand_1 = new Swiper('.brand-1 .swiper', {
     }
 });
 
+// thumbs-img
+const galleryThumbs = new Swiper('.thumbs .swiper', {
+    direction: 'vertical',
+    spaceBetween: 10,
+    slidesPerView: 5,
+    centeredSlides: true,
+    centeredSlidesBounds: true,
+    watchOverflow: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    navigation: {
+        nextEl: '.thumbs .swiper-button-next',
+        prevEl: '.thumbs .swiper-button-prev',
+    },
+});
 
+// thumbs-img
+const galleryMain = new Swiper('.view-div .swiper', {
+    watchOverflow: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    effect: 'fade',
+    fadeEffect: {
+        crossFade: true
+    },
+    thumbs: {
+        swiper: galleryThumbs
+    }
+});
+
+galleryMain.on('slideChangeTransitionStart', function() {
+    galleryThumbs.slideTo(galleryMain.activeIndex);
+  });
+  
+  galleryThumbs.on('transitionStart', function(){
+    galleryMain.slideTo(galleryThumbs.activeIndex);
+  });
 
 // menu
 $(document).on('click', '.all-category', function () {
@@ -114,13 +139,13 @@ $(document).on('focusout', '.ps-search-table .form-control', function () {
 });
 
 // grid & list product
-$(document).on('click','.grid-btn', function() {
+$(document).on('click', '.grid-btn', function () {
     $('.list-btn').removeClass('active');
     $(this).addClass('active');
     $('.products-grid').removeClass('list-product');
 });
 
-$(document).on('click','.list-btn', function() {
+$(document).on('click', '.list-btn', function () {
     $('.grid-btn').removeClass('active');
     $(this).addClass('active');
     $('.products-grid').addClass('list-product');
@@ -151,3 +176,27 @@ $('.toogle-password').on('click', function (event) {
 
 // countdown
 $('.offer-countdown').attr('data-date');
+
+// zoom img
+var options1 = {
+    offset: {
+        vertical: 0, 
+        horizontal: 10
+    }
+};
+
+var options2 = {
+    fillContainer: true,
+    offset: {
+        vertical: 0,
+        horizontal: 10
+    },
+    "zoomPosition":"left",
+};
+
+new ImageZoom(document.getElementById("img-1"), options2);
+new ImageZoom(document.getElementById("img-2"), options2);
+new ImageZoom(document.getElementById("img-3"), options2);
+new ImageZoom(document.getElementById("img-4"), options2);
+new ImageZoom(document.getElementById("img-5"), options2);
+new ImageZoom(document.getElementById("img-6"), options2);

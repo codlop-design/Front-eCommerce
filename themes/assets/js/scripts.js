@@ -200,3 +200,16 @@ new ImageZoom(document.getElementById("img-3"), options2);
 new ImageZoom(document.getElementById("img-4"), options2);
 new ImageZoom(document.getElementById("img-5"), options2);
 new ImageZoom(document.getElementById("img-6"), options2);
+
+
+// split table tr
+$(document).ready(function() {
+	let $mainTable = $("#specificationstable");
+    let trLength = $("#specificationstable tr").length
+	let splitBy = Math.ceil(trLength > 5 ? (trLength / 2) : trLength);
+	let rows = $mainTable.find ("tr").slice(splitBy);
+	let $secondTable = $("#specificationstable").parent().append("<table class='table table-striped-columns' id='secondspecificationstable'><tbody></tbody></table>");
+	$secondTable.find("tbody").append(rows);
+	$mainTable.find ("tr").slice(splitBy).remove();
+
+});

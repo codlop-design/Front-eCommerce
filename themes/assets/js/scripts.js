@@ -33,8 +33,8 @@ const category_1 = new Swiper('#category-1', {
 // product-1
 const product_1 = new Swiper('.product-1 .swiper', {
     spaceBetween: 15,
-    slidesPerView: 6,
-    slidesPerGroup: 6,
+    slidesPerView: 7,
+    slidesPerGroup: 7,
     navigation: {
         nextEl: '.product-1 .swiper-button-next',
         prevEl: '.product-1 .swiper-button-prev',
@@ -45,7 +45,7 @@ const product_1 = new Swiper('.product-1 .swiper', {
 const brand_1 = new Swiper('.brand-1 .swiper', {
     loop: true,
     spaceBetween: 15,
-    slidesPerView: 8,
+    slidesPerView: 9,
     speed: 3000,
     autoplay: {
         delay: 0,

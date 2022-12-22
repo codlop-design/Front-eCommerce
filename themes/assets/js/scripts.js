@@ -213,3 +213,23 @@ $(document).ready(function() {
 	$mainTable.find ("tr").slice(splitBy).remove();
 
 });
+
+
+// checkout steps
+$(document).on('click', '.choose--address .save-btn', function () {
+    $('.address-li').hide();
+    $('.confirmed-address').show();
+    $('.products-checkout').show();
+});
+
+$(document).on('click', '.products-checkout .save-btn', function () {
+    $('.products-li').hide();
+    $('.confirmed-products').show();
+    $('.choose-payment').show();
+});
+
+$(document).on('click', '.choose-payment .save-btn', function () {
+    $('.payment-li').hide();
+    $('.confirmed-payment').show();
+    $('.continue-checkout').prop("disabled", false);
+});

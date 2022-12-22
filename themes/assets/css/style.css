@@ -2157,6 +2157,7 @@ body.no-scroll {
 
 .user-form-remind p a {
     font-family: var(--body-fonts-semibold);
+    color: var(--secondary-color);
 }
 
 .user-form-footer {
@@ -2220,6 +2221,10 @@ body.no-scroll {
     margin-top: 20px;
     display: flex;
     gap: 5px;
+}
+
+.no-receive a {
+    color: var(--secondary-color);
 }
 
 .show-more-less {
@@ -3446,8 +3451,8 @@ body.no-scroll {
 }
 
 .cart-sec .cart-total {
-    width: 370px;
-    min-width: 370px;
+    width: 385px;
+    min-width: 385px;
 }
 
 .coupon {
@@ -3486,6 +3491,12 @@ body.no-scroll {
     position: sticky;
 
     top: 15px;
+
+    background: var(--bg-white);
+
+    padding: 20px 25px;
+
+    border-radius: 3px;
 }
 
 .totals-div h5 {
@@ -3571,6 +3582,7 @@ body.no-scroll {
     display: flex;
     gap: 8px;
     color: var(--text-gray-600);
+    justify-content: center;
 }
 
 .CartPage__disclaimer svg {
@@ -3597,6 +3609,10 @@ body.no-scroll {
     z-index: 2;
 }
 
+.checkout-page .head-checkout a {
+    width: max-content;
+}
+
 .checkout-page .head-checkout .logo-checkout img {
     max-width: 216px;
     height: 55px;
@@ -3618,6 +3634,7 @@ body.no-scroll {
     justify-content: end;
     color: var(--dark);
     font-family: var(--body-fonts-semibold);
+    margin-right: auto;
 }
 
 .checkout-parts {
@@ -3860,6 +3877,7 @@ body.no-scroll {
     display: flex;
     gap: 8px;
     font-size: 15px;
+    justify-content: flex-start;
 }
 
 .checkout-parts .left-part .CartPage__disclaimer svg {
@@ -4086,6 +4104,13 @@ body.no-scroll {
     width: 300px;
 }
 
+.checkout-parts .list-steps .choose-payment .choose-radio .checkout-tab span {
+    margin-top: 5px;
+    display: block;
+    font-size: 15px;
+    color: var(--text-gray-500);
+}
+
 .checkout-parts .list-steps .choose-payment .choose-radio .checkout-tab input {
     display: none;
 }
@@ -4104,6 +4129,7 @@ body.no-scroll {
     background: var(--bg-white);
     transition: .2s;
 }
+
 
 .checkout-parts .list-steps .choose-payment .choose-radio .checkout-tab label svg {
     width: 35px;
@@ -4125,4 +4151,32 @@ body.no-scroll {
 .bg-choose {
     background: var(--bg-gray);
     padding: 20px;
+}
+
+.checkout-parts .list-steps .confirmed-payment h3 span {
+    border: 2px solid var(--green);
+    color: var(--green);
+}
+
+.checkout-parts .list-steps .confirmed-payment .payment-conf {
+    padding-top: 7px;
+}
+
+.checkout-parts .list-steps .confirmed-payment .payment-conf h3 {
+    font-size: 20px;
+    margin: 0;
+    color: var(--dark);
+}
+
+.checkout-parts .list-steps .confirmed-payment .change-payment {
+    margin-right: auto;
+    min-width: max-content;
+}
+
+.confirmed-address,
+.confirmed-products,
+.confirmed-payment,
+.products-checkout,
+.choose-payment {
+    display: none;
 }

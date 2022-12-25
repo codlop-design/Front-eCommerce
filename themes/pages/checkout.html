@@ -46,7 +46,8 @@
                                 <p class="address-text">قم بتوصيل طلبك إلى منزلك أو مكتبك أو في أي مكان.</p>
                                 <p class="address-text">نحن نعمل مع عدد من شركات النقل المختلفة وسنقوم بالشحن عبر الشركة
                                     التي يمكنها تلبية احتياجات التوصيل الخاصة بك على أفضل وجه.</p>
-                                <a href="#" class="new-address">
+                                <a href="#" class="new-address" data-bs-toggle="modal"
+                                    data-bs-target="#add-address-modal">
                                     <i class="fa fa-plus"></i>
                                     اضافة عنوان جديد
                                 </a>
@@ -291,6 +292,117 @@
             </div>
         </div>
     </section>
+
+    <!-- add address -->
+    <div class="modal fade" id="add-address-modal">
+        <div class="modal-dialog modal-md modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title" id="exampleModalLabel">اضافة عنوان</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="flex-div">
+                            <div class="form-group">
+                                <label for="">الاسم الأول</label>
+                                <input type="text" class="form-control" placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <label for="">الاسم الأخير</label>
+                                <input type="text" class="form-control" placeholder="">
+                            </div>
+                        </div>
+                        <div class="flex-div">
+                            <div class="form-group">
+                                <label for="">المحافظة</label>
+                                <select name="" class="form-select">
+                                    <option value="">الرياض</option>
+                                    <option value="">مكة المكرمة</option>
+                                    <option value="">المدينة المنورة</option>
+                                    <option value="">القصيم</option>
+                                    <option value="">تبوك</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="">المدينة</label>
+                                <select name="" class="form-select">
+                                    <option value="">الخرج</option>
+                                    <option value="">الدرعية</option>
+                                    <option value="">الدوادمي</option>
+                                    <option value="">المجمعة</option>
+                                    <option value="">القويعية</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="flex-div">
+                            <div class="form-group">
+                                <label for="">المنطقة</label>
+                                <select name="" class="form-select">
+                                    <option value="">الهياثم</option>
+                                    <option value="">حي الامواج</option>
+                                    <option value="">حي الاندلس</option>
+                                    <option value="">حي البديعة</option>
+                                    <option value="">حي البرج</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="">اسم الشارع</label>
+                                <input type="text" class="form-control" placeholder="مثال : شارع العروبة">
+                            </div>
+                        </div>
+                        <div class="flex-div">
+                            <div class="form-group">
+                                <label for="">اسم المبنى / رقمه</label>
+                                <input type="text" class="form-control" placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <label for="">رقم الطابق، رقم الشقة، أو رقم الفيلا</label>
+                                <input type="text" class="form-control" placeholder="مثال : الطابق الرابع ، شقة 10">
+                            </div>
+                        </div>
+                        <div class="flex-div">
+                            <div class="form-group">
+                                <label for="">رقم الجوال</label>
+                                <input type="number" class="form-control" placeholder="">
+                                <span>يمكن استخدامه للمساعدة في توصيل الطلب</span>
+                            </div>
+                            <div class="form-group w-auto">
+                                <label for=""></label>
+                                <select name="" class="form-select">
+                                    <option value="">+20</option>
+                                    <option value="">+966</option>
+                                </select>
+                            </div>
+                        </div>
+                        <h4 class="address-type">نوع العنوان</h4>
+                        <div class="flex-div">
+                            <div class="form-group radio-div">
+                                <label for="1">
+                                    <input id="1" class="radio-custom" type="radio" name="radio" checked>
+                                    <span>المنزل</span>
+                                </label>
+                                <label for="2">
+                                    <input id="2" class="radio-custom" type="radio" name="radio">
+                                    <span>المكتب</span>
+                                </label>
+                            </div>
+                            <div class="form-group checkbox-div">
+                                <label for="3">
+                                    <input id="3" class="checkbox-custom" type="checkbox">
+                                    <span>تعيين كعنوان افتراضي</span>
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-save-modal">حفظ</button>
+                    <button type="button" class="btn-close-modal" data-bs-dismiss="modal">الغاء</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <script src="../assets/plugins/jquery-3.6.1.min.js"></script>
